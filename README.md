@@ -1,17 +1,11 @@
-# 🎂 Happy Birthday Julia! 🎈
+# 🎂 Happy Birthday! 🎈
 
 _An interactive birthday webpage crafted with love, code, and lots of confetti. 🎉🎉_
 
 ![Banner](icons/cake.gif)
 
-## ✨ What is this?
-
-This is not just another project folder—it’s a virtual celebration built for my amazing, long-distance friend, **THE MANLIEST MAN ALIVE**.  
-It's filled with music, memories, hugs, sparkles, and yes, an embarrassing amount of floating emojis.
-
-You can't cut cake through the screen (yet), but this is my version of showing up anyway—pixels, code, heart, and all.
-
----
+A fun, customizable, and open-source birthday webpage to celebrate someone's special day! 🎂
+Perfect for surprising friends, family, or coworkers with a personal touch — just clone, edit, and share the link.
 
 ## 🧁 Features
 
