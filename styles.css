@@ -1,0 +1,839 @@
+/*.navbar
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.nav-content
+{
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+{
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+}
+
+.nav-links a
+{
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #cccccc;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover
+{
+    color: #66fcf1; 
+}*/
+
+
+/* Basic Reset */
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#particles-js
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 50% 30%, #1b2735, #090a0f 70%, #000000 100%);
+    z-index: 0;
+}
+
+.main-content
+{
+    position: relative;
+    z-index: 1; /* make sure main page content stays ABOVE particles */
+}
+
+body, html
+{
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #000000;
+    overflow-x: hidden;
+}
+
+/* Loader styling */
+#loader
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.container
+{
+    --uib-size: 45px;
+    --uib-color: white;
+    --uib-speed: 1.75s;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 20%;
+    justify-content: space-between;
+    width: var(--uib-size);
+    height: calc(var(--uib-size) * 0.6);
+}
+
+.cube
+{
+    flex-shrink: 0;
+    width: calc(var(--uib-size) * 0.2);
+    height: calc(var(--uib-size) * 0.2);
+    animation: jump var(--uib-speed) ease-in-out infinite;
+}
+
+.cube__inner
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 25%;
+    background-color: var(--uib-color);
+    transform-origin: center bottom;
+    animation: morph var(--uib-speed) ease-in-out infinite;
+    transition: background-color 0.3s ease;
+}
+
+.cube:nth-child(2)
+{
+    animation-delay: calc(var(--uib-speed) * -0.36);
+}
+.cube:nth-child(2) .cube__inner
+{
+    animation-delay: calc(var(--uib-speed) * -0.36);
+}
+
+.cube:nth-child(3)
+{
+    animation-delay: calc(var(--uib-speed) * -0.2);
+}
+.cube:nth-child(3) .cube__inner
+{
+    animation-delay: calc(var(--uib-speed) * -0.2);
+}
+
+@keyframes jump
+{
+    0% { transform: translateY(0px); }
+    30% { transform: translateY(0px); animation-timing-function: ease-out; }
+    50% { transform: translateY(-200%); animation-timing-function: ease-in; }
+    75% { transform: translateY(0px); animation-timing-function: ease-in; }
+}
+
+@keyframes morph
+{
+    0%, 10% { transform: scaleY(1); }
+    20%, 25% { transform: scaleY(0.6) scaleX(1.3); animation-timing-function: ease-in-out; }
+    30% { transform: scaleY(1.15) scaleX(0.9); animation-timing-function: ease-in-out; }
+    40%, 70%, 85%, 100% { transform: scaleY(1); }
+    75% { transform: scaleY(0.8) scaleX(1.2); }
+}
+
+/* Music Button */
+#music-toggle
+{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+/* Main Sections */
+main
+{
+    padding: 4rem 2rem;
+}
+
+.carousel-section, .cards-section
+{
+    margin-top: 5rem;
+}
+
+
+
+
+.swiper {
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .swiper-wrapper {
+    transition-timing-function: linear !important;
+  }
+  
+  .swiper-slide {
+    width: 250px !important;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        position: relative;
+        padding: 6px;
+        border-radius: 20px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: filter 0.6s ease;
+    will-change: filter;
+    filter: brightness(1); /* fallback */
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    background-color: #000; /* fallback inner bg */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* SHINE EFFECT ONLY */
+  .swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.4) 50%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    transform: skewX(-25deg) translateX(var(--shine-x, -100%));
+    opacity: var(--shine-visible, 0);
+    will-change: transform, opacity;
+    pointer-events: none;
+    z-index: 2;
+    filter: blur(2px);
+
+  }
+  
+  
+  
+  
+  
+  
+  
+  html, body {
+    cursor: none !important;
+  margin: 0;
+  padding: 0;
+  background: black;
+  }
+
+  * {
+    cursor: none !important; /* Force-hide over swiper, buttons, etc. */
+  }
+
+  .sparkle {
+    position: absolute;
+    pointer-events: none;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 4px white, 0 0 10px gold, 0 0 15px orange;
+    z-index: 9999;
+    opacity: 1;
+  }
+  
+  
+
+
+  @keyframes moonGlow {
+    0% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.45);
+    }
+    100% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+    }
+  }
+  
+  
+  #hugBtn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url('icons/moon.png') center center / cover no-repeat;
+    border: none;
+    filter: brightness(0.25);
+    transform: scale(0.9);
+    cursor: pointer;
+    z-index: 9999;
+    animation: moonGlow 3s ease-in-out infinite;
+    transition: all 0.4s ease;
+  }
+  
+  #hugBtn:hover {
+    filter: brightness(1);
+    transform: scale(1.2);
+    box-shadow: 0 0 25px rgba(255,255,255,0.4), 0 0 50px rgba(200,220,255,0.35);
+  }
+  
+  #hugBtn {
+    animation: moonGlow 3s ease-in-out infinite;
+  }
+  
+  
+  #hugOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+  }
+  
+  #hugContent {
+    text-align: center;
+    animation: popIn 0.5s ease forwards;
+  }
+  
+  #hugContent img {
+    width: 200px;
+    max-width: 90vw;
+  }
+  
+  #hugContent p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #fff5f7;
+  }
+  
+  @keyframes popIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  
+  
+
+
+  .heart-sparkle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: red;
+    transform: rotate(45deg);
+    opacity: 1;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .heart-sparkle::before,
+  .heart-sparkle::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: red;
+    border-radius: 50%;
+  }
+  
+  .heart-sparkle::before {
+    top: -6px;
+    left: 0;
+  }
+  
+  .heart-sparkle::after {
+    top: 0;
+    left: -6px;
+  }
+
+  
+  .sparkle, .heart-sparkle {
+  position: fixed !important;
+  will-change: transform;
+  overflow: hidden;
+}
+
+  
+  
+
+
+
+#splash-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeIn 1s ease-in-out;
+    cursor: pointer;
+  }
+  
+  #cake {
+    width: 250px;
+    filter: brightness(70%);
+    transition: transform 0.3s;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  #confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+  }
+  
+  #balloon-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  #click-message {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: white;
+    animation: fadeIn 2s ease-in;
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .balloon {
+    position: absolute;
+    width: 40px;
+    height: 55px;
+    background: radial-gradient(circle at 30% 30%, #ff7eb3, #ff3c6d);
+    border-radius: 50% 50% 45% 45%;
+    animation: floatUp 5s linear forwards, wiggle 3s infinite ease-in-out;
+    opacity: 0.95;
+    z-index: 1001;
+  }
+  
+  .balloon::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%);
+  }
+  
+  @keyframes floatUp {
+    to {
+      transform: translateY(-110vh);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
+  
+  
+
+  
+
+  
+
+
+
+.messages-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.message-card {
+  background: #000000; /* True black */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
+  max-width: 320px;
+  width: 100%;
+  min-height: 150px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.1); /* Almost invisible until hover */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease, transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease, color 0.5s ease;
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.message-card.visible
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.message-card:hover
+{
+    background: linear-gradient(
+    145deg,
+    rgba(30,30,50,0.95),
+    rgba(20,20,40,0.95)
+    );
+    box-shadow: 0 0 40px rgba(50, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.95);
+    background-size: 200% 200%;
+    animation: shimmer 4s infinite;
+    transform: translateY(-10px) scale(1.06);
+}
+
+@keyframes shimmer
+{
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.quiz-button, .quiz-button-large {
+  background: linear-gradient(145deg, #ff69b400, #ff149100);
+  color: white;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(3px);
+}
+
+.quiz-button:hover, .quiz-button-large:hover {
+  background: linear-gradient(145deg, #ff149100, #ff69b400);
+  box-shadow: 0 0 35px rgba(255, 20, 145, 0);
+  transform: scale(1.05);
+}
+
+.quiz-button-large {
+  font-size: 1.2rem;
+}
+
+.quiz-button-large {
+  display: inline-block;
+  padding: 0.8em 1.6em;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #0ff;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #0ff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.quiz-button-large::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(120deg, #0ff, #66fcf1);
+  z-index: -1;
+  transition: all 0.4s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.quiz-button-large:hover::before {
+  transform: scaleX(1);
+}
+
+.quiz-button-large:hover {
+  color: black;
+  box-shadow: 0 0 30px rgba(102, 252, 241, 0.8);
+  border-color: transparent;
+}
+
+
+
+
+/* Birthday message card styling */
+.cake-container{
+  background: #000;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  box-shadow: 0 10px 30px #0ff;
+  backdrop-filter: blur(12px);
+  border: 1px solid #0ff;
+  text-align: center;
+  animation: floaty 5s ease-in-out infinite alternate;
+}
+@keyframes floaty {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.cake-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  width: 100%;
+}
+
+.cake-container2 img {
+  border-radius: 20px;
+  animation: floaty 4s ease-in-out infinite alternate;
+  box-shadow: 0 8px 20px #0ff;
+  max-width: 250px; /* or however large you want */
+  height: auto;
+}
+
+
+
+
+.message {
+  background: #000;
+  backdrop-filter: blur(10px);
+  border: 1px solid #0ff;
+  border-radius: 20px;
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 30px #0ff;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+
+  max-width: 700px;
+  width: 90%;
+  margin: 2rem auto;
+  overflow: hidden; /* Prevent horizontal overflow */
+  transition: height 0.3s ease;
+  min-height: fit-content;
+}
+
+
+/* Make message appear smoothly */
+@keyframes floatIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle glowing animation */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  }
+  to {
+    box-shadow: 0 0 50px #0ff;
+  }
+}
+
+/* Optional: Glowing cake effect */
+.cake {
+  width: 150px;
+  height: 150px;
+  background: url('icons/cake.gif') center/cover no-repeat;
+  margin-bottom: 1.5rem;
+  /*filter: drop-shadow(0 0 20px #0ff);*/
+  
+  animation: floatIn 2s ease-out forwards, glowPulse 3s infinite alternate;
+}
+
+
+#typing-text {
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  text-align: center;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Blinking cursor effect */
+#typing-text::after {
+  content: "|";
+  animation: blink 1s step-start infinite;
+  color: #0ff;
+  position: absolute;
+  right: -10px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.message {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+#typing-text {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 1.8;
+  text-align: center;
+}
+
+
+.title-card {
+  background: black;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
+  animation: floaty 4s ease-in-out infinite alternate;
+  position: relative;
+  z-index: 5;
+}
+
+.faces-title {
+  font-family: 'Dancing Script';
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 10;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+}
+
+.footer a {
+  color: #ffc6e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}

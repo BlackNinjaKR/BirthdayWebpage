@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown</title>
+  <link rel="stylesheet" href="countdown.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="countdown-container">
+    <div id="countdown" aria-live="polite">
+        <div><span id="days">0</span><div class="label">DAYS</div></div>
+        <div><span id="hours">0</span><div class="label">HOURS</div></div>
+        <div><span id="minutes">0</span><div class="label">MINUTES</div></div>
+        <div><span id="seconds">0</span><div class="label">SECONDS</div></div>
+    </div>        
+  </div>
+  <div id="birthday-popup" class="hidden">
+    <div class="popup-content">
+        <div class="tooltip-container">
+          <h2 id="birthday-title" style="cursor: pointer;">🎉 Happy Birthday! 🎉</h2> 
+          <span class="tooltip-text">💖 Tap Me for a Surprise! 💖</span>
+        </div>
+        
+        <p>Wishing you all the joy and love today and always!</p>
+      
+        <!-- Dancing GIF -->
+        <img src="photos/dance.gif" alt="Dancing Celebration" class="birthday-gif" />
+      
+        <button onclick="window.location.href='mainpage.html'">Celebrate</button>
+      </div>
+      <button id="enable-sound" style="display: none;" onclick="enableSound()">Click to Enable Sound</button>
+
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <audio id="birthday-audio" src="songs/hpbdy_main.mp3" preload="auto" loop></audio>
+
+
+  <script src="countdown.js"></script>
+  
+</body>
+</html>

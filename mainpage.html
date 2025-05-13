@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header class="navbar">
+        <!--<nav class="nav-content">
+          <div class="logo">🎂 Happy Birthday</div>
+          <div class="nav-links">
+            <a href="#memories">Memories</a>
+            <a href="#messages">Messages</a>
+            <a href="#top">Back to Top</a>
+            <a href="quiz.html" class="quiz-button">Take the Quiz</a> 
+          </div>          
+        </nav>-->
+      </header>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+      
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <div id="particles-js"></div>
+  
+<!-- Loader -->
+<div id="loader">
+  <div class="container">
+    <div class="cube"><div class="cube__inner"></div></div>
+    <div class="cube"><div class="cube__inner"></div></div>
+    <div class="cube"><div class="cube__inner"></div></div>
+  </div>
+</div>
+
+<!-- Music Toggle Button -->
+<button id="music-toggle">
+    <img id="music-icon" src="icons/festival.png" alt="Music Icon" width="40" height="40">
+  </button>
+<!-- Hidden Background Music Player -->
+<audio id="bg-music" preload="auto"></audio>
+
+<!-- Header (Background Animation Canvas goes here) -->
+<header class="finisher-header">
+    <!-- FinisherHeader will inject canvas here -->
+</header>
+<canvas id="confetti-canvas"></canvas>
+
+<div id="splash-screen">
+  <div class="overlay">
+    <div class="cake-container">
+      <img id="cake" src="icons/cake.gif" alt="cake" />
+      <div id="click-message">Click anywhere to continue</div>
+    </div>
+  </div>
+
+  <!-- Confetti bursts -->
+  <div class="confetti-container left" id="confetti-left"></div>
+  <div class="confetti-container right" id="confetti-right"></div>
+</div>
+<div id="balloon-container"></div>
+
+
+
+<div class="cake-container2">
+  <img src="photos/mew.jpg"/>
+</div>
+
+<div class="message">
+  <p id="typing-text"></p>
+</div>
+
+
+<div id="main-content" style="display: none;"></div>
+<!-- Main Content -->
+<main>
+  
+  
+
+    <!-- Memories Carousel Section -->
+
+    <section class="carousel-section">
+      
+
+  <div class="title-card">
+    <p class="faces-title">Faces of YOU 😊</p>
+  </div>
+      
+        <div class="swiper">
+          <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="photos/a.jpg" alt="Memory 1"></div>
+                  <div class="swiper-slide"><img src="photos/b.jpg" alt="Memory 2"></div>
+                  <div class="swiper-slide"><img src="photos/ba.jpg" alt="Memory 3"></div>
+                  <div class="swiper-slide"><img src="photos/c.jpg" alt="Memory 4"></div>
+                  <div class="swiper-slide"><img src="photos/d.jpg" alt="Memory 5"></div>
+                  <div class="swiper-slide"><img src="photos/f.jpg" alt="Memory 6"></div>
+                  <div class="swiper-slide"><img src="photos/g.jpg" alt="Memory 7"></div>
+                  <div class="swiper-slide"><img src="photos/h.jpg" alt="Memory 8"></div>
+                  <div class="swiper-slide"><img src="photos/i.jpg" alt="Memory 9"></div>
+                  <div class="swiper-slide"><img src="photos/j.jpg" alt="Memory 10"></div>
+                  <div class="swiper-slide"><img src="photos/k.jpg" alt="Memory 11"></div>
+                  <div class="swiper-slide"><img src="photos/l.jpg" alt="Memory 12"></div>
+                  <div class="swiper-slide"><img src="photos/m.jpg" alt="Memory 13"></div>
+                  <div class="swiper-slide"><img src="photos/n.jpg" alt="Memory 14"></div>
+                  <div class="swiper-slide"><img src="photos/o.jpg" alt="Memory 15"></div>
+                  <div class="swiper-slide"><img src="photos/p.jpg" alt="Memory 16"></div>
+                  <div class="swiper-slide"><img src="photos/q.jpg" alt="Memory 17"></div>
+                  <div class="swiper-slide"><img src="photos/r.jpg" alt="Memory 18"></div>
+                  <div class="swiper-slide"><img src="photos/s.jpg" alt="Memory 19"></div>
+                  <div class="swiper-slide"><img src="photos/t.jpg" alt="Memory 20"></div>
+                  <div class="swiper-slide"><img src="photos/u.jpg" alt="Memory 21"></div>
+                  <div class="swiper-slide"><img src="photos/v.jpg" alt="Memory 22"></div>
+                  <div class="swiper-slide"><img src="photos/w.png" alt="Memory 23"></div>
+                  <div class="swiper-slide"><img src="photos/x.png" alt="Memory 24"></div>
+                  <div class="swiper-slide"><img src="photos/y.jpg" alt="Memory 25"></div>
+                  <div class="swiper-slide"><img src="photos/z.jpg" alt="Memory 26"></div>
+                  <div class="swiper-slide"><img src="photos/za.jpg" alt="Memory 27"></div>
+                  <div class="swiper-slide"><img src="photos/zb.jpg" alt="Memory 28"></div>
+                  <div class="swiper-slide"><img src="photos/zc.jpg" alt="Memory 29"></div>
+                  <div class="swiper-slide"><img src="photos/e.jpg" alt="Memory 30"></div>
+                </div>
+              </div>
+
+        </div>
+    </section>
+<div></div>
+    
+
+    <section class="heartfelt-messages">
+      
+  <div class="title-card">
+    <p class="faces-title">Some heartfelt messages for YOU</p>
+  </div>
+        
+        <div class="messages-container"> <!--REPLACE WITH YOUR HEARTFELT MESSAGES-->
+          <div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+<div class="message-card">Lorem ipsum dolor sit amet.</div>
+
+        </div>
+      </section>
+
+    <section><button id="hugBtn"></button></section>
+
+</main>
+</div>
+
+<section class="quiz-cta">
+  
+  <div class="title-card">
+    <p class="faces-title">You think you know YOU?  Take this short quiz on how well you know her</p>
+    
+  <div style="text-align:center; margin-top: 1rem;">
+    <a href="quiz.html" class="quiz-button-large">Take the Quiz</a>
+  </div>
+  </div>
+
+</section>
+
+
+<div id="hugOverlay">
+  <div id="hugContent">
+    <img src="icons/hug-love-unscreen.gif" alt="Hug" id="Hug" />
+    <p>You’ve just been hugged! 💞</p>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+
+</body>
+
+<footer class="footer">
+  <p>Made with love, stardust, and maybe too many sleepless nights ✨</p>
+  <p>For YOU — always the brightest star in the sky 🌟</p>
+  <p>&copy; 2025 Made just for YOU. No rights reserved — share the love freely.</p>
+  
+  <p>✨ Made with stardust and sincerity by <strong>BlackNinjaKR</strong></p>
+  <p>
+    <a href="https://www.instagram.com/kr.n.quills/" target="_blank">@kr.n.quills</a> |
+    <a href="https://github.com/BlackNinjaKR" target="_blank">GitHub</a>
+  </p>
+</footer>
+</html>

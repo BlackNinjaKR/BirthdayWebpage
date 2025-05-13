@@ -1,0 +1,318 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    max-width: 700px;
+    width: 90%;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 30px #00f7ff44;
+    text-align: center;
+  }
+  
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #fff7d1;
+  }
+  
+  label, input, button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    font-size: 1.1em;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff3;
+    color: #fff;
+  }
+  
+  button {
+    background-color: #8ec5fc;
+    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  input, button, a#answersBtn {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  input {
+    margin-top: 20px;
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+  
+  a#answersBtn {
+    margin-top: 15px;
+  }
+  
+  
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  a#answersBtn {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    background: #f6d365;
+    background: linear-gradient(to right, #fda085, #f6d365);
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  a#answersBtn:hover {
+    filter: brightness(1.1);
+  }
+  
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow-x: hidden;
+    overflow-y: auto;    
+    height: 100vh;
+    position: relative;
+    color: #fff;
+  }
+  
+  /* Container for stars */
+  #starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+    color: #fff;
+  }
+  
+  /* Container for stars */
+  #starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  /* Layer 1 – small stars */
+  #starfield::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow:
+      10px 10px #fff, 20px 100px #fff, 30px 200px #fff, 40px 400px #fff,
+      50px 600px #fff, 60px 300px #fff, 70px 150px #fff, 80px 250px #fff,
+      90px 180px #fff, 100px 90px #fff, 120px 700px #fff, 130px 40px #fff,
+      140px 500px #fff, 160px 320px #fff, 180px 220px #fff, 200px 60px #fff,
+      240px 580px #fff, 280px 120px #fff, 300px 360px #fff, 340px 660px #fff,
+      400px 430px #fff, 460px 210px #fff, 500px 700px #fff, 550px 220px #fff,
+      600px 500px #fff, 650px 300px #fff, 700px 100px #fff, 750px 450px #fff,
+      800px 250px #fff, 850px 150px #fff, 900px 450px #fff, 1000px 50px #fff;
+    animation: drift 200s linear infinite, twinkle1 5s ease-in-out infinite;
+  }
+  
+  /* Layer 2 – medium stars */
+  #starfield .stars2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow:
+      15px 30px #ffffffaa, 45px 210px #ffffffaa, 75px 420px #ffffffaa,
+      105px 170px #ffffffaa, 135px 320px #ffffffaa, 165px 500px #ffffffaa,
+      195px 110px #ffffffaa, 225px 280px #ffffffaa, 255px 90px #ffffffaa,
+      285px 610px #ffffffaa, 315px 720px #ffffffaa, 345px 250px #ffffffaa,
+      450px 350px #ffffffaa, 500px 500px #ffffffaa, 550px 600px #ffffffaa;
+    animation: drift 180s linear infinite, twinkle2 7s ease-in-out infinite;
+  }
+  
+  /* Layer 3 – large/dim stars */
+  #starfield .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow:
+      100px 50px #ffffff66, 200px 150px #ffffff66, 300px 300px #ffffff66,
+      400px 600px #ffffff66, 500px 200px #ffffff66, 600px 700px #ffffff66,
+      700px 400px #ffffff66, 800px 500px #ffffff66, 900px 50px #ffffff66;
+    animation: drift 160s linear infinite, twinkle3 6s ease-in-out infinite;
+  }
+  
+  /* Drift movement for all layers */
+  @keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+  }
+  
+  /* Twinkle layers – different speeds */
+  @keyframes twinkle1 {
+    0%, 100% { opacity: 0.9; }
+    50% { opacity: 0.3; }
+  }
+  
+  @keyframes twinkle2 {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+  }
+  
+  @keyframes twinkle3 {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 0.2; }
+  }
+  
+  #star-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  
+  #fairyCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+
+
+  #nameForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #nameForm input {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  #questions {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+
+  button {
+    background: linear-gradient(135deg, #ff9ec4, #ffc8ec);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+  }
+  
+
+  .hidden {
+    display: none !important;
+  }
+
+  
+  #answersBtn {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  #answersBtn:not(.hidden) {
+    display: inline-block;
+    opacity: 1;
+  }
+  .quiz-link-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, filter 0.3s ease;
+  }
+  
+  .quiz-link-button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  
